@@ -379,6 +379,10 @@ textarea {
   color: var(--dk-gray);
 }
 
+figure {
+  margin: 1em 40px 1em 40px;
+}
+
 /* Code Styles */
 code {
   font-family: var(--code-fonts);
