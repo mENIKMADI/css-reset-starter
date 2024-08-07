@@ -301,6 +301,11 @@ fieldset {
   margin: 1rem 0;
   border-color: var(--red);
   padding: 0.35em 0.75em 0.625em 0.75em;
+  border: 2px groove var(--dk-gray);
+}
+
+legend {
+  padding: 0 2px;
 }
 
 /* Code for Custom Radios - Compare to Your zyBook, I added additional code to make these match my form styles */
