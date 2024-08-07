@@ -1,235 +1,377 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /* CSS VARIABLES */
-:root{
-    --red: #613A43;
-    --tan: #837C6F;
-    --mint: #AFC0B4;
-    --white: #F6F3EA;
-    --coral: #CE7871;
-    --dk-gray: #222;
+:root {
+  --red: #613a43;
+  --tan: #837c6f;
+  --mint: #afc0b4;
+  --white: #f6f3ea;
+  --coral: #ce7871;
+  --dk-gray: #222;
 
-    --fonts: 'Trebuchet MS', Verdana, sans-serif;
-    --code-fonts: 'Lucida Console', monospace;
+  --fonts: "Trebuchet MS", Verdana, sans-serif;
+  --code-fonts: "Lucida Console", monospace;
 }
 
 /* Body Styles */
 /* You will need to add more, but this adds a background pattern to the page */
-body{
-    background: var(--coral) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%23613a43' fill-opacity='0.2'%3E%3Cpath d='M12 0h18v6h6v6h6v18h-6v6h-6v6H12v-6H6v-6H0V12h6V6h6V0zm12 6h-6v6h-6v6H6v6h6v6h6v6h6v-6h6v-6h6v-6h-6v-6h-6V6zm-6 12h6v6h-6v-6zm24 24h6v6h-6v-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-    font-family: var(--fonts);
-    color: var(--dk-gray);
-    margin: 0;
-    line-height: 1.35;
+body {
+  background: var(--coral)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%23613a43' fill-opacity='0.2'%3E%3Cpath d='M12 0h18v6h6v6h6v18h-6v6h-6v6H12v-6H6v-6H0V12h6V6h6V0zm12 6h-6v6h-6v6H6v6h6v6h6v6h6v-6h6v-6h6v-6h-6v-6h-6V6zm-6 12h6v6h-6v-6zm24 24h6v6h-6v-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  font-family: var(--fonts);
+  color: var(--dk-gray);
+  margin: 0;
+  line-height: 1.35;
 }
 
 /* Styles for the Header, Main, & Footer */
 /* Limits the width, adds a background color and padding, and centers them on the page */
-header, main, footer{
-    padding: 1rem;
-    width: calc(1000px - 2rem);
-    margin: 0 auto;
-    background-color: var(--white);
+header,
+main,
+footer {
+  padding: 1rem;
+  width: calc(1000px - 2rem);
+  margin: 0 auto;
+  background-color: var(--white);
 }
 
 /* Shared header and footer styles */
-header, footer{
-    text-align: center;
-    background-color: var(--mint);
+header,
+footer {
+  text-align: center;
+  background-color: var(--mint);
 }
 
 /* Navigation Styles */
-nav{
-    width: 50%;
-    margin: 0 auto;
+nav {
+  width: 50%;
+  margin: 0 auto;
 }
 
-nav ul{
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    padding: 0;
+nav ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0;
 }
 
-nav a{
-    display: block;
-    padding: 1rem;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: var(--red);
-    color: var(--white);
+nav a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: var(--red);
+  color: var(--white);
 }
 
 /* Nav Hover Styles */
-nav a:hover{
-    color: var(--red);
-    background-color: var(--white);
+nav a:hover {
+  color: var(--red);
+  background-color: var(--white);
 }
 
 /* Styles for the Sections in the Main */
-main > section{
-    padding: 1rem 0;
+main > section {
+  padding: 1rem 0;
 }
 
 /* Styles for the h2 & h3 tags */
-h2, h3{
-    text-align: center;
+h2,
+h3 {
+  text-align: center;
 }
 
 /* Paragraph Styles */
-p{
-    max-width: 65ch;
-    margin: 0.5rem auto;
+p {
+  max-width: 65ch;
+  margin: 0.5rem auto;
 }
 
 /* Link Styles */
-a{
-    color: var(--red);
+a {
+  color: var(--red);
 }
 
 /* Link Hover Styles */
-a:hover{
-    text-decoration-color: var(--mint);
+a:hover {
+  -webkit-text-decoration-color: var(--mint);
+  text-decoration-color: var(--mint);
 }
 
 /* Link Focus Styles */
-a:focus{
-    outline-color: var(--coral);
-    outline-offset: 2px;
+a:focus {
+  outline-color: var(--coral);
+  outline-offset: 2px;
 }
 
 /* Form Styles */
-form{
-    width: 300px;
-    padding: 1rem;
-    margin: 0 auto;
+form {
+  width: 300px;
+  padding: 1rem;
+  margin: 0 auto;
 }
 
 /* Input, Label, and textarea styles  */
-input, label, textarea{
-    display: block;
+input,
+label,
+textarea {
+  display: block;
 }
 
 /* For the asterisks in the form section */
-.required{
-    color: var(--coral);
+.required {
+  color: var(--coral);
 }
 
 /* Shared input and textarea Styles */
-input, textarea{
-    margin: 0.25rem 0 1rem 0;
-    width: calc(100% - 8px);
-    border: 2px solid var(--red);
+input,
+textarea {
+  margin: 0.25rem 0 1rem 0;
+  width: calc(100% - 8px);
+  border: 2px solid var(--red);
 }
 
 /* Input and Textarea Focus Styles */
-input:focus, input:focus-visible, textarea:focus, textarea:focus-visible{
-    border-color: var(--coral);
-    outline: 2px solid var(--coral);
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  border-color: var(--coral);
+  outline: 2px solid var(--coral);
 }
 
 /* input styles */
-input{
-    height: 2rem;
+input {
+  height: 2rem;
 }
 
 /* Fieldset Styles */
-fieldset{
-    display: grid;
-    grid-template-columns: 0.25fr 6fr 0.25fr 6fr;
-    gap: 1rem;
-    margin: 1rem 0;
-    border-color: var(--red);
+fieldset {
+  display: grid;
+  grid-template-columns: 0.25fr 6fr 0.25fr 6fr;
+  gap: 1rem;
+  margin: 1rem 0;
+  border-color: var(--red);
 }
 
 /* Code for Custom Radios - Compare to Your zyBook, I added additional code to make these match my form styles */
-input[type=radio] + label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+input[type="radio"] + label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
-input[type=radio] {
-    appearance: none;
-    margin: 0;
-    padding: 0;
-    border: none;
-    font-size: 0;
-    border-radius: 0;
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 0;
+  border-radius: 0;
 }
 
-input[type=radio] + label::before {
-    content: "\00a0";   /* Non-breaking space */
-    font-size: 2.75em;
-    line-height: 0.3;
-    border-radius: 50%;
-    display: inline-block;  
-    height: 21px;
-    width: 22px;
-    text-align: center;
-    margin-right: 16px;
-    border: 2px solid var(--red);   /* Push focus shadow away */
-    background-color: var(--white);
-    padding: 2px 1px 0 0;
+input[type="radio"] + label::before {
+  content: "\00a0"; /* Non-breaking space */
+  font-size: 2.75em;
+  line-height: 0.3;
+  border-radius: 50%;
+  display: inline-block;
+  height: 21px;
+  width: 22px;
+  text-align: center;
+  margin-right: 16px;
+  border: 2px solid var(--red); /* Push focus shadow away */
+  background-color: var(--white);
+  padding: 2px 1px 0 0;
 }
 
-input[type=radio]:checked + label::before {
-    content: "\2022";
-    color: var(--white);
-    background: var(--red);
+input[type="radio"]:checked + label::before {
+  content: "\2022";
+  color: var(--white);
+  background: var(--red);
 }
 
-input[type=radio]:focus{
-	outline: none;
+input[type="radio"]:focus {
+  outline: none;
 }
 
-input[type=radio]:focus + label::before {
-    box-shadow: 0 0 0 2px var(--coral);
+input[type="radio"]:focus + label::before {
+  box-shadow: 0 0 0 2px var(--coral);
 }
 
 /* Textarea Styles */
-textarea{
-    height: 5rem;
+textarea {
+  height: 5rem;
 }
 
 /* Submit Button Styles */
-#my-submit{
-    padding: 1rem 8px;
-    margin: 1rem auto;
-    width: 100%;
-    height: auto;
-    background-color: var(--red);
-    color: var(--white);
-    border: none;
-    font-size: 1.1rem;
-    font-weight: bold;
+#my-submit {
+  padding: 1rem 8px;
+  margin: 1rem auto;
+  width: 100%;
+  height: auto;
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 /* Submit Button Hover Styles */
-#my-submit:hover{
-    background-color: var(--coral);
-    color: var(--dk-gray);
+#my-submit:hover {
+  background-color: var(--coral);
+  color: var(--dk-gray);
 }
 
 /* Code Styles */
-code{
-    font-family: var(--code-fonts);
-    font-size: 1rem;
+code {
+  font-family: var(--code-fonts);
+  font-size: 1rem;
 }
 
 /* for the pre block */
-pre{
-    font-family: var(--code-fonts);
+pre {
+  font-family: var(--code-fonts);
 }
 
-pre code{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 2px solid var(--dk-gray);
+pre code {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid var(--dk-gray);
 }
 
-code div{
-    padding: 1rem;
-    overflow: scroll;
+code div {
+  padding: 1rem;
+  overflow: scroll;
 }
