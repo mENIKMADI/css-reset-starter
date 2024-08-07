@@ -182,6 +182,7 @@ nav ul {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   padding: 0;
+  margin: 1em 0 1em 0;
 }
 
 nav a {
@@ -202,6 +203,24 @@ nav a:hover {
 /* Styles for the Sections in the Main */
 main > section {
   padding: 1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.67em 0 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.83em 0 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17rem;
+  font-weight: bold;
+  margin: 1em 0 1em 0;
 }
 
 /* Styles for the h2 & h3 tags */
@@ -281,6 +300,7 @@ fieldset {
   gap: 1rem;
   margin: 1rem 0;
   border-color: var(--red);
+  padding: 0.35em 0.75em 0.625em 0.75em;
 }
 
 /* Code for Custom Radios - Compare to Your zyBook, I added additional code to make these match my form styles */
